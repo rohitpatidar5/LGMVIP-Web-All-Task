@@ -1,69 +1,91 @@
-body {
-    font-family: Poppins, sans-serif;
+*{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.container {
-    max-width: 400px;
-    margin: 30px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 900;
-}
-
-.input-container {
+body{
+    height: 100vh;
     display: flex;
-    align-items: stretch;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#7F7FD5, #91EAE4);
 }
 
-input[type="text"] {
-    flex: 0.9;
-    padding: 10px;
+.calculator{
+    position: relative;
+    max-width: 21rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem 2rem 2rem;
+    background: #252A34;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    outline: 1rem solid #444850;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: black;
-    color: #fff;
+h4{
+    text-align: center;
+    padding-top: 0.5rem;
+    font-size: 1.7rem;
+    margin-bottom: -1.9rem;
+    color:#7F7FD5;
+}
+
+.display{
+    height: 5.1rem;
+    width: 100%;
+    outline: none;
     border: none;
+    text-align: right;
+    margin: 50px 0;
+    font-size: 40px;
+    color: #111;
+    pointer-events: none;
+}
+
+input{
+    border-radius: 9px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.8rem;
+}
+
+.buttons button{
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
     cursor: pointer;
-    border-radius: 5px;
+    background: linear-gradient(#dcdbdb , #a4a3a3);
 }
 
-button:hover {
-    background-color: rgb(57, 55, 55);
+.buttons button:hover{
+    transition: 0.5s;
+    background: linear-gradient(#9b9b9b, #e8e8e8);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.buttons button:active{
+    transition: scale(0.99);
 }
 
-li {
-    margin: 10px 0;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+button.btn-opr{
+    background: linear-gradient(#d2ffff, #0694c6);
 }
 
-.completed {
-    text-decoration: line-through;
-    color: red;
+button.btn-opr:hover{
+    background: linear-gradient(#0694c6,#d2ffff);
 }
 
-/* Media query for mobile devices */
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 80%;
-  }
+button.eqn{
+    color: white;
+    background: linear-gradient(#0F3443, #34E89E);
+    grid-column: 3/5;
+}
+
+button.eqn:hover{
+    background: linear-gradient(#34E89E, #0F3443);
 }
